@@ -1,0 +1,13 @@
+{
+  "projects": {},
+  "targets": {},
+  "etags": {
+    "web3-a4b9b": {
+      "extensionInstances": {
+        "moralis-auth-bc9n": "122457383bd535e2c4007e8251eb7c287f9c9446717bb526398cf5983311b143",
+        "moralis-auth-jhwt": "00cc27931c0623594199e69dd49aa7d4772a4dd0f675a9c373d90599118b906a",
+        "moralis-auth": "f2689edc6ab98177125428f577af9841d9fae1510184ab00cd99b9f0a768bc4e"
+      }
+    }
+  }
+}
