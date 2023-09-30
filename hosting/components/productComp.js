@@ -181,7 +181,7 @@ export default function ProductComp() {
                 />
               </svg>
             </section>
-            <p>Secture Transaction</p>
+            <p>Secure Transaction</p>
           </section>
         </section>
       </section>
