@@ -23,7 +23,21 @@ export default function ProductComp() {
     setDelivery(e.target.value);
   };
 
-  const handleOk = async () => {};
+  const handleOk = async () => {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    await provider.send("eth_requestAccounts", []);
+    const signer = provider.getSigner();
+    const tx = signer.sendTransaction({
+      to: toAddress,
+      value: ethers.utils.parseEther((price / usdPrice).toString()),
+    });
+    addDoc(dbInstance, {
+      purchasedBy: auth.currentUser?.displayName,
+      deliveryAddress: delivery,
+      productPurchased: "Eth Token",
+    });
+    setIsModalVisible(false);
+  };
 
   return (
     <section className={styles.main}>
