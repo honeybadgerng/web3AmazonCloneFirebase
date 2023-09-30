@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Modal } from "antd";
 import { ethers } from "ethers";
+import axios from "axios";
 import { useFirebase } from "./FirebaseInitializer";
 import { app } from "./firebase";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
@@ -14,11 +15,20 @@ export default function ProductComp() {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [delivery, setDelivery] = useState("");
   const [contact, setContact] = useState("");
+  const [usdPrice, setUsdPrice] = useState(0);
   const toAddress = "0xa5606eF96681EFf13e46b63bd9Cb75F102Eb3144";
   const price = 9.99;
 
   const database = getFirestore(app);
   const dbInstance = collection(database, "purchase");
+
+  useEffect(() => {
+    async function getPrice() {
+      const response = await axios.get("http://localhost:5001/ethtoken");
+      setUsdPrice(response.data.usdPrice.toFixed(2));
+    }
+    getPrice();
+  }, []);
 
   const getDeliveryAddress = async (e) => {
     setDelivery(e.target.value);
