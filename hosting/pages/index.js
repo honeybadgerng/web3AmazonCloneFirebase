@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <section className={styles.container}>
       <Head>
-        <title>Naija crypto market place</title>
+        <title>Xclusive Crypto Mart</title>
       </Head>
       <Header />
       <SubHeader />
