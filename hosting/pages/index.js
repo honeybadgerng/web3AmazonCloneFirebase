@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "/styles/Home.module.css";
 
 import Header from "../components/header";
-// import SubHeader from "../components/subHeader";
+import SubHeader from "../components/subHeader";
 // import Main from "../components/main";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
         <title>Xclusive Crypto Mart</title>
       </Head>
       <Header />
-      {/* <SubHeader /> */}
+      <SubHeader />
       {/* <Main /> */}
     </section>
   );
