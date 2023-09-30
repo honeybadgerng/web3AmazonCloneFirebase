@@ -1,0 +1,15 @@
+.header {
+  background-color: #141920;
+  color: #ffffff;
+  width: 100%;
+}
+
+.header_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  height: 4rem;
+  padding: 0 1.5rem;
+  font-weight: bold;
+}
