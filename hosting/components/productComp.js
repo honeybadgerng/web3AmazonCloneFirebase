@@ -13,6 +13,7 @@ export default function ProductComp() {
   const { auth } = useFirebase();
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [delivery, setDelivery] = useState("");
+  const [contact, setContact] = useState("");
   const toAddress = "0xa5606eF96681EFf13e46b63bd9Cb75F102Eb3144";
   const price = 9.99;
 
@@ -23,6 +24,9 @@ export default function ProductComp() {
     setDelivery(e.target.value);
   };
 
+  const getDeliveryContact = async (e) => {
+    setContact(e.target.value);
+  };
   const handleOk = async () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     await provider.send("eth_requestAccounts", []);
@@ -34,6 +38,7 @@ export default function ProductComp() {
     addDoc(dbInstance, {
       purchasedBy: auth.currentUser?.displayName,
       deliveryAddress: delivery,
+      deliveryContact: contact,
       productPurchased: "Eth Token",
     });
     setIsModalVisible(false);
@@ -231,6 +236,19 @@ export default function ProductComp() {
               placeholder="Delivery Address"
               required
               onChange={getDeliveryAddress}
+            />
+            <label className={styles.modalLabel} htmlFor="inputField">
+              contact
+            </label>
+            <input
+              className={styles.modalInputField}
+              type="text"
+              id="inputField"
+              name="inputField"
+              maxLength="11"
+              placeholder="phone number"
+              required={true}
+              onChange={getDeliveryContact}
             />
           </section>
         </section>
