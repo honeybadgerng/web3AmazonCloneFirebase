@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css";
 import { signInWithMoralis } from "@moralisweb3/client-firebase-evm-auth";
 import { useFirebase } from "../components/FirebaseInitializer";
 
-import Logo from "../public/assets/amazon_logo.png";
+import Logo from "../public/assets/xclusiveCryptoMart.png";
 import Usa from "../public/assets/nigFlag.png";
 
 export default function Header() {
