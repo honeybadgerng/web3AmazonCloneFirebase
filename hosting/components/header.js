@@ -16,13 +16,21 @@ export default function Header() {
   );
 
   async function signInByMetaMask() {
-    await signInWithMoralis(moralisAuth);
-    setCurrentUser(auth.currentUser?.displayName);
+    try {
+      await signInWithMoralis(moralisAuth);
+      setCurrentUser(auth.currentUser?.displayName);
+    } catch (error) {
+      console.error("Moralis Authentication Error:", error);
+    }
   }
 
   async function signOut() {
-    await auth.signOut();
-    setCurrentUser(null);
+    try {
+      await auth.signOut();
+      setCurrentUser(null);
+    } catch (error) {
+      console.error("Firebase Sign-Out Error:", error);
+    }
   }
 
   return (
