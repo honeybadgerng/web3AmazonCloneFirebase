@@ -4,7 +4,7 @@ import { Modal } from "antd";
 import { ethers } from "ethers";
 import axios from "axios";
 import { useFirebase } from "./FirebaseInitializer";
-import { app } from "./firebase";
+import { app } from "./Firebase";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import styles from "../styles/Home.module.css";
 
