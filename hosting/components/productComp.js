@@ -161,8 +161,9 @@ export default function ProductComp() {
               </li>
               <li>
                 💰100% Satisfaction Guaranteed - We take pride in the quality of
-                our cryptocurrency coins and know you'll be thrilled. If you
-                don't like it, we accept returns and exchanges at any time.
+                our cryptocurrency coins and know you&apos;ll be thrilled. If
+                you don&apos;t like it, we accept returns and exchanges at any
+                time.
               </li>
             </ul>
           </section>
