@@ -4,7 +4,7 @@ import { Modal } from "antd";
 import { ethers } from "ethers";
 import axios from "axios";
 import { useFirebase } from "./FirebaseInitializer";
-import { app } from "./firebase";
+import { app } from "./Firebase";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import styles from "../styles/Home.module.css";
 
@@ -161,8 +161,8 @@ export default function ProductComp() {
               </li>
               <li>
                 💰100% Satisfaction Guaranteed - We take pride in the quality of
-                our cryptocurrency coins and know you'll be thrilled. If you
-                don't like it, we accept returns and exchanges at any time.
+                our cryptocurrency coins and know you will be thrilled. If you
+                do not like it, we accept returns and exchanges at any time.
               </li>
             </ul>
           </section>

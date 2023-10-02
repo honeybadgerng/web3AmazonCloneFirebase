@@ -21,7 +21,7 @@ export default function SubHeader() {
           </section>
           <p>All</p>
         </section>
-        <p className={styles.subHeader_items}>Today's Deals</p>
+        <p className={styles.subHeader_items}>Todays Deals</p>
         <p className={styles.subHeader_items}>Customer Service</p>
         <p className={styles.subHeader_items}>Registry</p>
         <p className={styles.subHeader_items}>Gift Cards</p>
