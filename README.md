@@ -2,7 +2,7 @@
 
 This project contains a simple Next.js app integrated with Moralis and Firebase.
 
-you can demo the project: `web3-amazon-clone-firebase.vercel.app`
+you can demo the project: [here](web3-amazon-clone-firebase.vercel.app)
 Required Google Cloud services:
 
 - [Firebase Hosting](https://firebase.google.com/docs/hosting)
